@@ -5,9 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/backlight.h>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     keymap {
@@ -39,11 +38,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp GRAVE  &kp F1  &kp F2  &kp F3         &kp F4      &kp F5                        &kp F11          &kp F12          &trans           &kp LS(MINUS)   &kp LS(EQUAL)  &trans
-&trans     &kp F6  &kp F7  &kp F8         &kp F9      &kp F10                       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK  &trans         &trans
-&trans     &trans  &trans  &bl BL_CYCLE   &bl BL_INC  &bl BL_ON                     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp CAPSLOCK    &trans         &trans
-&trans     &trans  &trans  &bl BL_SET 10  &bl BL_DEC  &bl BL_OFF  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans          &trans         &trans
-                           &trans         &trans      &trans      &trans    &trans  &trans           &kp KP_NUMBER_0  &trans
+&kp GRAVE  &kp F1  &kp F2  &kp F3                             &kp F4           &kp F5                             &kp F11          &kp F12          &trans           &kp LS(MINUS)   &kp LS(EQUAL)  &trans
+&trans     &kp F6  &kp F7  &kp F8                             &kp F9           &kp F10                            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK  &trans         &trans
+&trans     &trans  &trans  &rgb_ug RGB_COLOR_HSB(210,100,26)  &rgb_ug RGB_BRI  &rgb_ug RGB_ON                     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp CAPSLOCK    &trans         &trans
+&trans     &trans  &trans  &rgb_ug RGB_HUD                    &rgb_ug RGB_BRD  &rgb_ug RGB_OFF  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans          &trans         &trans
+                           &trans                             &trans           &trans           &trans    &trans  &trans           &kp KP_NUMBER_0  &trans
             >;
         };
 
@@ -56,23 +55,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans     &trans  &trans  &trans   &trans   &trans                     &sl 3     &trans        &trans     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DELETE
+&trans     &trans  &trans  &trans   &trans   &trans                     &trans    &trans        &trans     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DELETE
 &kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &trans    &kp UP_ARROW  &trans     &trans            &trans             &trans
 &kp F1     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &kp LEFT  &kp DOWN      &kp RIGHT  &trans            &trans             &trans
 &kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &trans    &trans        &trans     &trans            &trans             &kp RCTRL
-                           &trans   &trans   &trans   &mo 3     &trans  &trans    &trans        &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        ShiftFunctions-3 {
-            bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4                    &sl 0   &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &trans         &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &bl BL_CYCLE   &bl BL_INC    &bl BL_ON                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans        &bl BL_SET 10  &bl BL_DEC    &bl BL_OFF    &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans         &trans        &trans        &trans    &trans  &trans  &trans  &trans
+                           &trans   &trans   &trans   &trans    &trans  &trans    &trans        &trans
             >;
         };
     };
