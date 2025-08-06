@@ -30,7 +30,7 @@
             bindings = <
 &kp GRAVE  &kp F1  &kp F2  &kp F3                             &kp F4           &kp F5                             &kp F11          &kp F12          &trans           &kp LS(MINUS)   &kp LS(EQUAL)  &trans
 &trans     &kp F6  &kp F7  &kp F8                             &kp F9           &kp F10                            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK  &trans         &trans
-&trans     &trans  &trans  &rgb_ug RGB_COLOR_HSB(0,25,25)  &rgb_ug RGB_BRI  &rgb_ug RGB_ON                     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp CAPSLOCK    &trans         &trans
+&trans     &trans  &trans  &rgb_ug RGB_COLOR_HSB(196,99,10)  &rgb_ug RGB_BRI  &rgb_ug RGB_ON                     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp CAPSLOCK    &trans         &trans
 &trans     &trans  &trans  &rgb_ug RGB_HUD                    &rgb_ug RGB_BRD  &rgb_ug RGB_OFF  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans          &trans         &trans
                            &trans                             &trans           &trans           &trans    &trans  &trans           &kp KP_NUMBER_0  &trans
             >;
