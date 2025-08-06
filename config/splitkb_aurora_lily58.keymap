@@ -1,7 +1,5 @@
 /*
- * Copyright (c) 2022 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
+ * om nom nom nom
  */
 
 #include <behaviors.dtsi>
@@ -9,7 +7,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &led_strip {
-    chain-length = <28>;
+    chain-length = <29>;
 };
 
 / {
@@ -17,12 +15,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
-            // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
-            // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-            // | SHIFT |  Z  |  X  |  C   |  V   |  B   |   "["  |  |  "]"  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
 &kp ESC           &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                          &kp N6  &kp N7        &kp N8    &kp N9     &kp N0      &kp BACKSPACE
@@ -34,29 +26,17 @@
         };
 
         lower_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
-            // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
-            // |   `   |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   ~   |
-            // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
-            //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
 &kp GRAVE  &kp F1  &kp F2  &kp F3                             &kp F4           &kp F5                             &kp F11          &kp F12          &trans           &kp LS(MINUS)   &kp LS(EQUAL)  &trans
 &trans     &kp F6  &kp F7  &kp F8                             &kp F9           &kp F10                            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMLOCK  &trans         &trans
-&trans     &trans  &trans  &rgb_ug RGB_COLOR_HSB(210,100,26)  &rgb_ug RGB_BRI  &rgb_ug RGB_ON                     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp CAPSLOCK    &trans         &trans
+&trans     &trans  &trans  &rgb_ug RGB_COLOR_HSB(0,25,25)  &rgb_ug RGB_BRI  &rgb_ug RGB_ON                     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp CAPSLOCK    &trans         &trans
 &trans     &trans  &trans  &rgb_ug RGB_HUD                    &rgb_ug RGB_BRD  &rgb_ug RGB_OFF  &trans    &trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans          &trans         &trans
                            &trans                             &trans           &trans           &trans    &trans  &trans           &kp KP_NUMBER_0  &trans
             >;
         };
 
         raise_layer {
-            // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
-            // |   F1  |  F2 |  F3 |  F4  |  F5  |  F6  |                   |      |   <-  |   v   |  ^   |  ->   |       |
-            // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
-            //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
 &trans     &trans  &trans  &trans   &trans   &trans                     &trans    &trans        &trans     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp DELETE
