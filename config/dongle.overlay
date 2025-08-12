@@ -1,0 +1,13 @@
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+};
+
+&usb {
+    status = "okay";
+};
+
+&kscan0 {
+    status = "disabled";
+};
